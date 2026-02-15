@@ -44,37 +44,14 @@
 
 ---
 
-## 📂 目錄結構（主要檔案 / 模組概覽）
+## 🖼️ 截圖展示
 
-```text
-
-core/
-├── base/                # Stack、ClockTimer、全域工具
-├── debug/               # dbg：開發用除錯輸出工具
-├── font/                # 字型 JSON 載入與渲染、文字管理
-├── hmi/                 # SONG、RANK、BaseManager（狀態/介面抽象）
-├── keyboard/            # 鍵盤輸入映射、游標 hook 管理
-├── location_layout/     # 版面配置（LayoutManager、LayoutItem）
-├── page/                # 頁面管理、導航與 boot 流程
-├── screen/              # 螢幕初始化、背景與圖片管理、繪圖管理
-├── tetris_game/         # 遊戲核心（Tetromino, Field, TetrisCore, Attack, Level, Mode）
-│   ├── attack/          # 對戰系統（Attack, BattleManager）
-│   ├── level/           # 等級/難度管理
-│   └── mode/            # single/double/endless 三種模式邏輯
-├── variable.py          # 全域路徑、顏色、PageTable、JsonPath 等
-Tetris.py                # 遊戲啟動與主迴圈（exe 起點）
-Tetris.exe               # 已打包為可執行檔
-
-```
-
-## 🚀 如何執行
-1. 直接執行可執行檔（推薦）
-進入 Tetris_program-exe 資料夾
-雙擊 Tetris.exe 執行（Windows）
-
-2. 以原始碼執行（開發者）
-安裝相依套件 `pip install pygame`
-並在**Tetris_program-exe**專案根目錄執行 `python Tetris.py`
+![screenshot1](screenshot/screenshot1.png)
+![screenshot2](screenshot/screenshot2.png)
+![screenshot3](screenshot/screenshot3.png)
+![screenshot4](screenshot/screenshot4.png)
+![screenshot5](screenshot/screenshot5.png)
+![screenshot6](screenshot/screenshot6.png)
 
 ---
 
@@ -109,6 +86,40 @@ DrawManager 將繪圖指令集中處理，分靜態/動態渲染。
 
 ---
 
+## 📂 目錄結構（主要檔案 / 模組概覽）
+
+```text
+
+core/
+├── base/                # Stack、ClockTimer、全域工具
+├── debug/               # dbg：開發用除錯輸出工具
+├── font/                # 字型 JSON 載入與渲染、文字管理
+├── hmi/                 # SONG、RANK、BaseManager（狀態/介面抽象）
+├── keyboard/            # 鍵盤輸入映射、游標 hook 管理
+├── location_layout/     # 版面配置（LayoutManager、LayoutItem）
+├── page/                # 頁面管理、導航與 boot 流程
+├── screen/              # 螢幕初始化、背景與圖片管理、繪圖管理
+├── tetris_game/         # 遊戲核心（Tetromino, Field, TetrisCore, Attack, Level, Mode）
+│   ├── attack/          # 對戰系統（Attack, BattleManager）
+│   ├── level/           # 等級/難度管理
+│   └── mode/            # single/double/endless 三種模式邏輯
+├── variable.py          # 全域路徑、顏色、PageTable、JsonPath 等
+Tetris.py                # 遊戲啟動與主迴圈（exe 起點）
+Tetris.exe               # 已打包為可執行檔
+
+```
+
+## 🚀 如何執行
+1. 直接執行可執行檔（推薦）
+進入 Tetris_program-exe 資料夾
+雙擊 Tetris.exe 執行（Windows）
+
+2. 以原始碼執行（開發者）
+安裝相依套件 `pip install pygame`
+並在**Tetris_program-exe**專案根目錄執行 `python Tetris.py`
+
+---
+
 ## 📝 學習與決策重點
 - 模組化：畫面、字型、鍵盤、遊戲邏輯分離，方便除錯與擴充。
 
@@ -125,15 +136,3 @@ DrawManager 將繪圖指令集中處理，分靜態/動態渲染。
 資源檔案：data/, img/, font/, song/
 
 除錯：dbg.toggle() 開/關 debug 輸出，追蹤函式呼叫與參數
-
-
-
-## 🖼️ 截圖展示
-
-![screenshot1](screenshot/screenshot1.png)
-![screenshot2](screenshot/screenshot2.png)
-![screenshot3](screenshot/screenshot3.png)
-![screenshot4](screenshot/screenshot4.png)
-![screenshot5](screenshot/screenshot5.png)
-![screenshot6](screenshot/screenshot6.png)
-
